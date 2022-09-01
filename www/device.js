@@ -44,6 +44,7 @@ function Device () {
     this.isVirtual = null;
     this.serial = null;
     this.isiOSAppOnMac = null;
+    this.iosLaunchArgument = null;
 
     var me = this;
 
@@ -66,6 +67,7 @@ function Device () {
                 }
                 me.manufacturer = info.manufacturer || 'unknown';
                 me.serial = info.serial || 'unknown';
+                me.iosLaunchArgument = info.iosLaunchArgument;
 
                 // SDK Version is Android specific. If defined, it will be appended.
                 if (info.sdkVersion !== undefined) {

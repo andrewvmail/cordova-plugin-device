@@ -95,7 +95,8 @@
              @"uuid": [self uniqueAppInstanceIdentifier:device],
              @"cordova": [[self class] cordovaVersion],
              @"isVirtual": @([self isVirtual]),
-             @"isiOSAppOnMac": @([self isiOSAppOnMac])
+             @"isiOSAppOnMac": @([self isiOSAppOnMac]),
+             @"iosLaunchArgument": [[[NSProcessInfo processInfo] arguments] lastObject]
              };
 }
 
